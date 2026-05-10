@@ -1,0 +1,244 @@
+.pd-notfound {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 1.5rem;
+  min-height: 60vh;
+}
+
+.pd-breadcrumb {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.82rem;
+  color: var(--gray-400);
+  padding-top: 1.5rem;
+  padding-bottom: 0.5rem;
+}
+
+.pd-breadcrumb a {
+  color: var(--gray-600);
+  transition: color 0.2s;
+}
+
+.pd-breadcrumb a:hover { color: var(--navy); }
+
+.pd-breadcrumb span:last-child {
+  color: var(--navy);
+  font-weight: 500;
+}
+
+/* Main layout */
+.pd-main {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 3.5rem;
+  padding-top: 1.5rem;
+  padding-bottom: 2rem;
+  align-items: start;
+}
+
+/* Image */
+.pd-image-wrap {
+  position: relative;
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  box-shadow: var(--shadow-lg);
+  aspect-ratio: 1;
+  background: var(--gray-100);
+}
+
+.pd-image-wrap img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.pd-badge {
+  position: absolute;
+  top: 1rem;
+  left: 1rem;
+  font-size: 0.78rem;
+  padding: 0.3rem 0.8rem;
+}
+
+/* Info */
+.pd-category {
+  font-size: 0.75rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.07em;
+  color: var(--teal);
+  margin-bottom: 0.5rem;
+}
+
+.pd-name {
+  font-family: var(--font-serif);
+  font-size: clamp(1.5rem, 3vw, 2rem);
+  color: var(--navy);
+  line-height: 1.25;
+  margin-bottom: 1rem;
+}
+
+/* Rating */
+.pd-rating {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  margin-bottom: 1.25rem;
+  font-size: 0.84rem;
+  color: var(--gray-600);
+}
+
+.pd-stars {
+  display: flex;
+  gap: 2px;
+}
+
+/* Price */
+.pd-price {
+  display: flex;
+  align-items: baseline;
+  gap: 0.75rem;
+  margin-bottom: 1.25rem;
+}
+
+.pd-price-current {
+  font-size: 1.75rem;
+  font-weight: 800;
+  color: var(--navy);
+}
+
+.pd-price-original {
+  font-size: 1rem;
+  color: var(--gray-400);
+  text-decoration: line-through;
+}
+
+.pd-price-save {
+  font-size: 0.8rem;
+  font-weight: 700;
+  color: var(--pink);
+  background: rgba(212,25,138,.1);
+  padding: 0.2rem 0.6rem;
+  border-radius: 100px;
+}
+
+.pd-desc {
+  font-size: 0.92rem;
+  color: var(--gray-600);
+  line-height: 1.75;
+  margin-bottom: 1.75rem;
+}
+
+/* Qty + Add */
+.pd-qty-row {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+.pd-qty {
+  display: flex;
+  align-items: center;
+  border: 1.5px solid var(--gray-200);
+  border-radius: var(--radius-sm);
+  overflow: hidden;
+}
+
+.pd-qty button {
+  width: 38px;
+  height: 42px;
+  border: none;
+  background: transparent;
+  font-size: 1.1rem;
+  color: var(--navy);
+  transition: background 0.2s;
+}
+
+.pd-qty button:hover:not(:disabled) { background: var(--gray-100); }
+.pd-qty button:disabled { opacity: 0.4; cursor: not-allowed; }
+
+.pd-qty span {
+  min-width: 42px;
+  text-align: center;
+  font-weight: 600;
+  font-size: 0.95rem;
+  border-left: 1.5px solid var(--gray-200);
+  border-right: 1.5px solid var(--gray-200);
+  line-height: 42px;
+}
+
+.pd-add-btn {
+  flex: 1;
+  justify-content: center;
+  padding: 0.75rem 1.5rem;
+  font-size: 0.95rem;
+  transition: background 0.25s, transform 0.25s, box-shadow 0.25s;
+}
+
+.pd-add-btn--added {
+  background: #16a34a;
+}
+
+/* WhatsApp button */
+.pd-whatsapp-btn {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  background: #25d366;
+  color: #fff;
+  padding: 0.75rem 1.5rem;
+  border-radius: var(--radius-sm);
+  font-weight: 600;
+  font-size: 0.9rem;
+  margin-bottom: 1.5rem;
+  transition: var(--transition);
+  justify-content: center;
+}
+
+.pd-whatsapp-btn:hover {
+  background: #1db954;
+  transform: translateY(-1px);
+  box-shadow: 0 4px 14px rgba(37,211,102,.3);
+}
+
+/* Meta */
+.pd-meta {
+  font-size: 0.82rem;
+  color: var(--gray-400);
+}
+
+.pd-meta span {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+}
+
+.pd-meta a { color: var(--navy); text-decoration: underline; }
+
+/* Related */
+.pd-related {
+  padding: 3.5rem 0 4rem;
+  background: rgba(124,47,188,.03);
+}
+
+.pd-related-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+  margin-top: 1.5rem;
+}
+
+@media (max-width: 860px) {
+  .pd-main { grid-template-columns: 1fr; gap: 2rem; }
+  .pd-related-grid { grid-template-columns: repeat(2, 1fr); }
+}
+
+@media (max-width: 520px) {
+  .pd-related-grid { grid-template-columns: 1fr; }
+  .pd-qty-row { flex-wrap: wrap; }
+  .pd-add-btn { width: 100%; }
+}
