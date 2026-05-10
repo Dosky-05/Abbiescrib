@@ -70,7 +70,7 @@ const usps = [
       </svg>
     ),
     title: '24/7 Support',
-    desc: 'Have a question? Reach us on WhatsApp any time — we\'re always here.',
+    desc: 'Have a question? Reach us on WhatsApp any time we\'re always here.',
   },
 ];
 
