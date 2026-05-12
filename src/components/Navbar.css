@@ -237,4 +237,8 @@
   .navbar__links a::after {
     display: none;
   }
+
+  .navbar__search-form input {
+    font-size: 0.8rem;
+  }
 }
