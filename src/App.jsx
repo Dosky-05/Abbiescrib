@@ -1,6 +1,7 @@
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import { CartProvider } from './context/CartContext';
 import ScrollToTop from './components/ScrollToTop';
+import ToastContainer from './components/ToastContainer';
 import Navbar from './components/Navbar';
 import Footer from './components/Footer';
 import Home from './pages/Home';
@@ -15,6 +16,7 @@ export default function App() {
     <CartProvider>
       <BrowserRouter>
         <ScrollToTop />
+        <ToastContainer />
         <Navbar />
         <Routes>
           <Route path="/"           element={<Home />} />

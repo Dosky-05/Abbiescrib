@@ -4,16 +4,19 @@
   left: 0;
   right: 0;
   z-index: 1000;
-  background: rgba(248, 246, 255, 0.85);
-  backdrop-filter: blur(12px);
-  -webkit-backdrop-filter: blur(12px);
-  border-bottom: 1px solid rgba(30, 42, 110, 0.08);
+  background: rgba(255, 240, 245, 0.7);
+  backdrop-filter: blur(16px) saturate(180%);
+  -webkit-backdrop-filter: blur(16px) saturate(180%);
+  border-bottom: 1px solid rgba(30, 42, 110, 0.1);
   transition: box-shadow 0.3s ease, background 0.3s ease;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.05);
 }
 
 .navbar--scrolled {
-  background: rgba(248, 246, 255, 0.97);
-  box-shadow: var(--shadow-md);
+  background: rgba(255, 235, 240, 0.85);
+  backdrop-filter: blur(16px) saturate(180%);
+  -webkit-backdrop-filter: blur(16px) saturate(180%);
+  box-shadow: 0 8px 40px rgba(0, 0, 0, 0.1);
 }
 
 .navbar__inner {
@@ -30,40 +33,19 @@
   align-items: center;
   gap: 0.6rem;
   flex-shrink: 0;
+  transition: transform 0.3s ease;
 }
 
-.navbar__logo-icon {
-  width: 38px;
-  height: 38px;
-  background: linear-gradient(135deg, var(--navy) 0%, var(--purple) 100%);
-  color: #fff;
-  border-radius: var(--radius-sm);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-family: var(--font-serif);
-  font-size: 1.2rem;
-  font-weight: 700;
+.navbar__logo:hover {
+  transform: scale(1.05);
 }
 
-.navbar__logo-text {
-  display: flex;
-  flex-direction: column;
-  line-height: 1.1;
-}
-
-.navbar__logo-name {
-  font-weight: 800;
-  font-size: 1rem;
-  color: var(--navy);
-  letter-spacing: 0.08em;
-}
-
-.navbar__logo-sub {
-  font-family: var(--font-serif);
-  font-size: 0.8rem;
-  color: var(--pink);
+.navbar__logo-image {
+  height: 40px;
+  width: auto;
+  object-fit: contain;
   letter-spacing: 0.04em;
+  transition: transform 0.3s ease;
 }
 
 /* Nav Links */
@@ -121,13 +103,14 @@
   background: transparent;
   color: var(--gray-600);
   border-radius: var(--radius-sm);
-  transition: var(--transition);
+  transition: all 0.3s ease;
   position: relative;
 }
 
 .navbar__icon-btn:hover {
   background: var(--gray-100);
   color: var(--navy);
+  transform: scale(1.1);
 }
 
 .navbar__cart-count {

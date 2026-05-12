@@ -56,7 +56,7 @@ export default function Cart() {
                 <Link to={`/product/${item.id}`} className="cart-item__img">
                   <img src={item.image} alt={item.name} />
                 </Link>
-                <div className="cart-item__info">
+                <div className="cart-item__info">, item.name
                   <p className="cart-item__category">{item.category}</p>
                   <Link to={`/product/${item.id}`}>
                     <h3 className="cart-item__name">{item.name}</h3>

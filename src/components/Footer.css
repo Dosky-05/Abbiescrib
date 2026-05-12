@@ -19,34 +19,10 @@
   margin-bottom: 1rem;
 }
 
-.footer__logo-icon {
-  width: 36px;
-  height: 36px;
-  background: linear-gradient(135deg, var(--pink) 0%, var(--purple) 100%);
-  color: #fff;
-  border-radius: var(--radius-sm);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-family: var(--font-serif);
-  font-size: 1.1rem;
-  font-weight: 700;
-  flex-shrink: 0;
-}
-
-.footer__logo-name {
-  display: block;
-  font-weight: 800;
-  font-size: 0.95rem;
-  color: #fff;
-  letter-spacing: 0.08em;
-}
-
-.footer__logo-sub {
-  display: block;
-  font-family: var(--font-serif);
-  font-size: 0.75rem;
-  color: var(--pink-light);
+.footer__logo-image {
+  height: 50px;
+  width: auto;
+  object-fit: contain;
 }
 
 .footer__tagline {

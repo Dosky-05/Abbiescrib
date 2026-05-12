@@ -10,11 +10,7 @@ export default function Footer() {
         {/* Brand */}
         <div className="footer__brand">
           <div className="footer__logo">
-            <div className="footer__logo-icon">A</div>
-            <div>
-              <span className="footer__logo-name">ABBIES</span>
-              <span className="footer__logo-sub">Crib</span>
-            </div>
+            <img src="/Abbiescriblogo.png" alt="Abbies Crib Logo" className="footer__logo-image" />
           </div>
           <p className="footer__tagline">
             Your No. 1 store for exquisite branded gift items.

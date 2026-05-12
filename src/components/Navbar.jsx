@@ -33,11 +33,7 @@ export default function Navbar() {
       <div className="container navbar__inner">
         {/* Logo */}
         <Link to="/" className="navbar__logo" onClick={closeMenu}>
-          <div className="navbar__logo-icon">A</div>
-          <div className="navbar__logo-text">
-            <span className="navbar__logo-name">ABBIES</span>
-            <span className="navbar__logo-sub">Crib</span>
-          </div>
+          <img src="/Abbiescriblogo.png" alt="Abbies Crib Logo" className="navbar__logo-image" />
         </Link>
 
         {/* Nav Links */}

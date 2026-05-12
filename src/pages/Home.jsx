@@ -6,12 +6,12 @@ import products from '../data/products';
 import './Home.css';
 
 const categories = [
-  { name: 'Perfumes', icon: <Droplets size={32} strokeWidth={1.5} />, color: 'cat--pink' },
-  { name: 'Gift Boxes', icon: <Gift size={32} strokeWidth={1.5} />, color: 'cat--navy' },
-  { name: 'Accessories', icon: <Gem size={32} strokeWidth={1.5} />, color: 'cat--purple' },
-  { name: 'Beauty', icon: <Sparkles size={32} strokeWidth={1.5} />, color: 'cat--teal' },
-  { name: 'Bags', icon: <ShoppingBag size={32} strokeWidth={1.5} />, color: 'cat--pink' },
-  { name: 'Home & Lifestyle', icon: <HomeIcon size={32} strokeWidth={1.5} />, color: 'cat--navy' },
+  { name: 'Perfumes', icon: <Droplets size={32} strokeWidth={1.5} />, color: 'cat--pink', image: '/Perfumes.jpg' },
+  { name: 'Gift Boxes', icon: <Gift size={32} strokeWidth={1.5} />, color: 'cat--navy', image: '/GiftBoxes.jpg' },
+  { name: 'Accessories', icon: <Gem size={32} strokeWidth={1.5} />, color: 'cat--purple', image: '/Accessories.jpg' },
+  { name: 'Beauty', icon: <Sparkles size={32} strokeWidth={1.5} />, color: 'cat--teal', image: '/Beauty.jpg' },
+  { name: 'Bags', icon: <ShoppingBag size={32} strokeWidth={1.5} />, color: 'cat--pink', image: '/Bags.jpg' },
+  { name: 'Home & Lifestyle', icon: <HomeIcon size={32} strokeWidth={1.5} />, color: 'cat--navy', image: '/Home&Lifestyle.jpg' },
 ];
 
 const testimonials = [
@@ -140,7 +140,8 @@ export default function Home() {
               <Link
                 key={cat.name}
                 to={`/shop?category=${encodeURIComponent(cat.name)}`}
-                className={`category-card ${cat.color}`}
+                className={`category-card ${cat.color} ${cat.image ? 'category-card--featured' : ''}`}
+                style={cat.image ? { backgroundImage: `url('${cat.image}')` } : {}}
               >
                 <span className="category-card__icon">{cat.icon}</span>
                 <span className="category-card__name">{cat.name}</span>
