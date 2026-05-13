@@ -1,18 +1,13 @@
 import { useState, useEffect } from 'react';
-import { Link, NavLink, useNavigate, useLocation } from 'react-router-dom';
+import { Link, NavLink, useNavigate } from 'react-router-dom';
 import { useCart } from '../context/CartContext';
 import './Navbar.css';
 
 export default function Navbar() {
   const { cartCount } = useCart();
-  const location = useLocation();
   const [scrolled, setScrolled] = useState(false);
   const [menuOpen, setMenuOpen] = useState(false);
-  const [searchOpen, setSearchOpen] = useState(false);
-  const [searchQuery, setSearchQuery] = useState('');
   const navigate = useNavigate();
-
-  const isShopPage = location.pathname === '/shop';
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 20);
@@ -49,18 +44,6 @@ export default function Navbar() {
 
         {/* Actions */}
         <div className="navbar__actions">
-          {isShopPage && (
-            <button
-              className="navbar__icon-btn"
-              onClick={() => setSearchOpen(s => !s)}
-              aria-label="Search"
-            >
-              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.2">
-                <circle cx="11" cy="11" r="8" /><line x1="21" y1="21" x2="16.65" y2="16.65" />
-              </svg>
-            </button>
-          )}
-
           <Link to="/cart" className="navbar__icon-btn navbar__cart-btn">
             <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.2">
               <path d="M6 2L3 6v14a2 2 0 002 2h14a2 2 0 002-2V6l-3-4z" />
@@ -79,24 +62,6 @@ export default function Navbar() {
           </button>
         </div>
       </div>
-
-      {/* Search Bar */}
-      {searchOpen && isShopPage && (
-        <div className="navbar__search">
-          <div className="container">
-            <form onSubmit={handleSearch} className="navbar__search-form">
-              <input
-                type="text"
-                placeholder="Search products…"
-                value={searchQuery}
-                onChange={e => setSearchQuery(e.target.value)}
-                autoFocus
-              />
-              <button type="submit" className="btn-primary">Search</button>
-            </form>
-          </div>
-        </div>
-      )}
     </header>
   );
 }
